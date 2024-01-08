@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+.box {
+  background-color: white;
+  width: 60%;
+  height: 236px;
+  border: 0.5px solid rgb(81, 74, 74);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.left {
+  width: 20%;
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/*.img {
+  width: 200px;
+  height: 140px;
+  border-radius: 15px;
+  padding: 10px;
+}*/
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  /* padding: 10px; */
+  transition: transform 0.3s ease-in-out;
+}
+.img:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+}
+.img:active {
+  background-color: #1c0caa; /* Change background color on click */
+}
+.right {
+  width: 80%;
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  gap: 4px;
+}
+.first-row {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+.rating-type {
+  display: flex;
+}
+.rating {
+  background-color: rgb(15, 76, 190);
+  padding: 4px;
+  border-radius: 4px;
+  color: white;
+  margin: auto 4px;
+}
+h3 {
+  color: rgb(0, 125, 250);
+  padding: 0;
+  margin: 0;
+}
+h3:hover {
+  color: black;
+}
+.bookinglink {
+  color: rgb(0, 125, 250);
+  text-decoration: none;
+}
+.bookinglink:hover {
+  color: black;
+}
+.bookinglink.clicked {
+  color: red; /* or any other color for the clicked state */
+}
+h5,
+h6 {
+  font-weight: 400;
+}
+.btn {
+  width: 30%;
+  padding: 5px;
+  border: none;
+  background-color: rgb(2, 112, 222);
+  color: white;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+.btn:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+  filter: drop-shadow(0 0 10px #0cd258e3);
+}
+.second-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+.second-row > a {
+  font-size: 12px;
+  color: rgb(0, 125, 250);
+  font-weight: 600;
+}
+.second-row > span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.third-row > span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.fourth-row > span {
+  font-size: 12px;
+  font-weight: 400;
+  color: green;
+  background-color: rgb(220, 254, 220);
+  padding: 4px 4px;
+}
+.fifth-row > span {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: rgb(13, 144, 13);
+  color: white;
+  padding: 4px 7px;
+  border-radius: 4px;
+  margin: 8px auto;
+}
+.sixth-row {
+  border-left: 3px solid rgb(224, 224, 224);
+  margin: 6px 0;
+  padding: 2px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.left-extra > h5 {
+  font-weight: 600;
+  font-size: 10px;
+}
+.left-extra > h6 {
+  font-weight: 400;
+  font-size: 10px;
+}
+.right-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.right-extra :nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+.right-extra :nth-child(2) :nth-child(1) {
+  color: crimson;
+  text-decoration: line-through;
+}
+.tooltips:hover .tooltipstext {
+  visibility: visible;
+  display: block;
+}
+.tooltips .tooltipstext {
+  visibility: hidden;
+  width: 100px;
+  background-color: rgb(35, 211, 176);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.icon {
+  position: absolute;
+  top: 6%;
+  left: 75%;
+}
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-message {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.icon-container:hover .hover-message {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .box {
+    height: auto;
+    width: 100%;
+  }
+  .left,
+  .right {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  .first-row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+}
